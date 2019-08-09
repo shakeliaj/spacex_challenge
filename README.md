@@ -1,7 +1,7 @@
 # spacex_challenge
 
 To run:
-1. First clone the github package: "git clone **urlToRepo**"
+1. First clone the github package
 2. Navigate to newly created folder (this will need to be done twice, so I just navigate to the folder from two different terminal windows)
 3. You can either install the packages with npm or use yarn (I will provide both directions, though I use yarn for adding and updating packages)
     Using Npm:
