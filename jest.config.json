@@ -1,0 +1,9 @@
+
+{
+    "collectCoverage": true,
+    "collectCoverageFrom": ["app/**/*.js", "!**/node_modules/**"],
+    "coveragePathIgnorePatterns": ["<rootDir>/node_modules/", "app/public/bundle.js"],
+    "coverageReporters": ["html", "text", "json-summary"],
+    "verbose": false,
+    "reporters": ["default", "jest-junit"]
+}

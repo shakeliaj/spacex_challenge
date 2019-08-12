@@ -9,6 +9,6 @@ import './scss/index.scss'
 import App from './containers/App.jsx'
 
 render (
-	<App />,
-	document.getElementById('app')
+  <App />,
+  document.getElementById('app')
 )

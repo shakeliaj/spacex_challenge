@@ -11,3 +11,55 @@ body {
 .text-white {
     color: white;
 }
+
+.gradient-background {
+    background: #d2ebf9;
+    background: -moz-linear-gradient(top,  #d2ebf9 0%, #feffff 100%);
+    background: -webkit-linear-gradient(top,  #d2ebf9 0%,#feffff 100%);
+    background: linear-gradient(to bottom,  #d2ebf9 0%,#feffff 100%);   
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ebf9', endColorstr='#feffff',GradientType=0 );
+}
+
+ul {
+    list-style-type: none;
+    li {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+}
+
+.header-one-container {
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid white;
+    height: 50px;
+    line-height: 3;
+}
+
+.table {
+    font-size: 12px;
+    thead {
+        th {
+            color: #236B8E;
+            font-weight: lighter;
+        }
+    }
+    tbody {
+        tr {
+            .badge-img {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header-one-container {
+        height: auto;
+        line-height: normal;
+
+        li:not(:last-of-type) {
+            border-bottom: 1px solid white;
+        }
+    }
+}

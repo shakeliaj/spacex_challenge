@@ -3,34 +3,42 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { getLaunchData } from '../actions'
-// import LaunchTable from '../components/LaunchTable.jsx'
+import LaunchTable from '../components/LaunchTable.jsx'
 
 class LaunchList extends Component {
-    constructor(props) {
-        super(props)
-    }
+  constructor(props) {
+    super(props)
+    this.requestLaunchData = this.requestLaunchData.bind(this)
+  }
 
-    componentDidMount() {
-        this.props.dispatch(getLaunchData())
-    }
+  componentDidMount() {
+    this.requestLaunchData()
+  }
 
-    render() {
-        return (
-            <div className="container">
-                <h1 className="text-white col text-center mt-5">SpaceX Launches</h1>
-            </div>
-        )
-    }
+  requestLaunchData() {
+    this.props.dispatch(getLaunchData())
+  }
+
+  render() {
+    return (
+      <div className="container-fluid">
+        <div className="col-12 mt-5 text-center">
+          <h1 className="text-white">SpaceX Launches</h1>
+        </div>
+        <LaunchTable data={this.props.launchData} reloadData={this.requestLaunchData} />
+      </div>
+    )
+  }
 }
 
 LaunchList.propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    launchData: PropTypes.object
+  dispatch: PropTypes.func.isRequired,
+  launchData: PropTypes.object
 }
 
 const mapStateToProps = state => {
-    const { launchData } = state
-    return { launchData }
+  const { launchData } = state
+  return { launchData }
 }
 
 export default connect(mapStateToProps)(LaunchList)

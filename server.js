@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname + '/app')))
 
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname + '/app/index.html'))
+  res.sendFile(path.join(__dirname + '/app/index.html'))
 })
 
 app.listen(PORT, function() {
-	console.log('listening on port 8000')
+  console.log('listening on port 8000')
 })
