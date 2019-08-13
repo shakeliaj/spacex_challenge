@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const config = {
   entry: './app/index.jsx',
@@ -34,6 +34,6 @@ const config = {
     contentBase: path.resolve(__dirname, 'app'),
     historyApiFallback: true
   }
-}
+};
 
 module.exports = config;

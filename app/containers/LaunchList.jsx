@@ -1,22 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import { getLaunchData } from '../actions'
-import LaunchTable from '../components/LaunchTable.jsx'
+import { getLaunchData } from '../actions';
+import LaunchTable from '../components/LaunchTable.jsx';
 
 class LaunchList extends Component {
   constructor(props) {
-    super(props)
-    this.requestLaunchData = this.requestLaunchData.bind(this)
+    super(props);
+    this.requestLaunchData = this.requestLaunchData.bind(this);
   }
 
   componentDidMount() {
-    this.requestLaunchData()
+    this.requestLaunchData();
   }
 
   requestLaunchData() {
-    this.props.dispatch(getLaunchData())
+    this.props.dispatch(getLaunchData());
   }
 
   render() {
@@ -27,18 +27,18 @@ class LaunchList extends Component {
         </div>
         <LaunchTable data={this.props.launchData} reloadData={this.requestLaunchData} />
       </div>
-    )
+    );
   }
 }
 
 LaunchList.propTypes = {
   dispatch: PropTypes.func.isRequired,
   launchData: PropTypes.object
-}
+};
 
 const mapStateToProps = state => {
-  const { launchData } = state
-  return { launchData }
-}
+  const { launchData } = state;
+  return { launchData };
+};
 
-export default connect(mapStateToProps)(LaunchList)
+export default connect(mapStateToProps)(LaunchList);

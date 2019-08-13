@@ -1,9 +1,9 @@
-import { launchData } from '../reducers'
+import { launchData } from '../reducers';
 import {
   GET_LAUNCH_DATA_REQUEST,
   GET_LAUNCH_DATA_SUCCESS,
   GET_LAUNCH_DATA_FAILURE,
-} from '../actions'
+} from '../actions';
   
 //   export function launchData (state = { loading: false }, action) {
 //     switch(action.type) {
@@ -28,11 +28,11 @@ import {
 
 describe('launchData', () => {
   test('returns state from GET_LAUNCH_DATA_REQUEST', () => {
-    const action = { type: GET_LAUNCH_DATA_REQUEST }
+    const action = { type: GET_LAUNCH_DATA_REQUEST };
     expect(launchData(undefined, action)).toEqual({
       loading: true
-    })
-  })
+    });
+  });
 
   //   const { 
   //     flight_number,
@@ -81,22 +81,17 @@ describe('launchData', () => {
           }
         }
       ]
-    }
+    };
     expect(launchData(undefined, action)).toEqual({
       loading: false,
       launches: [
         {
-          article_link: "article_link",
-          badge: "mission_patch",
-          details: "details",
-          id: "1",
+          article_link: 'article_link',
+          badge: 'mission_patch',
+          details: 'details',
+          id: '1',
           land_success: true,
-          launch_date: "08/12/2019",
-          links: {
-            article_link: "article_link",
-            mission_patch: "mission_patch",
-            reddit: null,
-          },
+          launch_date: '08/12/2019',
           reusedItems: false,
           rocket: {
             first_stage: {
@@ -110,25 +105,25 @@ describe('launchData', () => {
           with_reddit: false,
         },
       ]
-    })
-  })
+    });
+  });
 
   test('returns state from GET_LAUNCH_DATA_FAILURE', () => {
     const action = {
       type: GET_LAUNCH_DATA_FAILURE,
       err: 'Error'
-    }
+    };
 
     expect(launchData(undefined, action)).toEqual({
       loading: false,
       err: 'Error'
-    })
-  })
+    });
+  });
 
   test('returns default state', () => {
-    const action = { type: 'NOT_GET_LAUNCH_RELATED' }
+    const action = { type: 'NOT_GET_LAUNCH_RELATED' };
     expect(launchData(undefined, action)).toEqual({
       loading: false
-    })
-  })
-})
+    });
+  });
+});

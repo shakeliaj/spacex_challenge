@@ -1,17 +1,17 @@
-import moment from 'moment'
+import moment from 'moment';
 
 export function getRedditDetails(links) {
-  const reddit = Object.keys(links).filter(i => i.includes('reddit'))
+  const reddit = Object.keys(links).filter(i => i.includes('reddit'));
   for(let item of reddit) {
     if(links[item] !== null) {
-      return true
+      return true;
     }
   }
-  return false
+  return false;
 }
 
 export function getReused(obj) {
-  return Object.values(obj).every(i => i === false) ? false : true
+  return Object.values(obj).every(i => i === false) ? false : true;
 }
 
 export function getMappedData(data) {
@@ -32,9 +32,8 @@ export function getMappedData(data) {
       details,
       launch_date: moment(launch_date_utc).format('L'),
       rocket,
-      links,
       land_success: rocket.first_stage.cores[0].land_success,
       reusedItems: getReused(reuse)
-    }
-  })
+    };
+  });
 }

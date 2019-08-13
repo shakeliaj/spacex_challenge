@@ -1,12 +1,12 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 import {
   GET_LAUNCH_DATA_REQUEST,
   GET_LAUNCH_DATA_SUCCESS,
   GET_LAUNCH_DATA_FAILURE,
-} from './actions'
+} from './actions';
 
-import { getMappedData } from './services/utils'
+import { getMappedData } from './services/utils';
 
 
 export function launchData (state = { loading: false }, action) {
@@ -14,24 +14,24 @@ export function launchData (state = { loading: false }, action) {
   case GET_LAUNCH_DATA_REQUEST:
     return {
       loading: true
-    }
+    };
   case GET_LAUNCH_DATA_SUCCESS:
     return {
       loading: false,
       launches: getMappedData(action.data)
-    }
+    };
   case GET_LAUNCH_DATA_FAILURE:
     return {
       loading: false,
       err: action.err
-    }
+    };
   default:
-    return state 
+    return state; 
   }
 }
 
 const rootReducer = combineReducers({
   launchData
-})
+});
 
-export default rootReducer
+export default rootReducer;
