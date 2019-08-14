@@ -39,16 +39,16 @@ class LaunchTable extends Component {
     return list.map(header => {
       const value = header.split(' ').join('_').toLowerCase();
       return (
-        <li key={uuivd4()} className="col text-white px-md-0 d-md-inline pt-2 pt-md-0">
+        <li key={uuivd4()} className="col text-white pl-md-0 d-md-inline pt-2 pt-md-0">
           <label className="mb-md-0" htmlFor={value}>
             <input 
               type="checkbox" 
+              className="mr-1"
               onChange={this.handleChange}
               checked={this.state[value]}
               name={value}>
             </input>
-            <span className="justify-content-center align-items-center d-inline-flex"></span>
-            <span className="label-text">{header}</span>
+            {header}
           </label>
         </li>
       );

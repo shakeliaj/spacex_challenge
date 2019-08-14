@@ -8,6 +8,10 @@ body {
     background-size: cover;
 }
 
+h1 {
+    font-weight: lighter;
+}
+
 .text-white {
     color: white;
 }
@@ -34,6 +38,18 @@ ul {
     height: 50px;
     line-height: 3;
     margin-bottom: -5px;
+
+    .refresh-div {
+        border: 1px solid white;
+        padding: 0;
+        border-radius: 50%;
+        width: fit-content;
+        height: 60%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .loading {
@@ -45,6 +61,7 @@ ul {
     font-size: 12px;
     border-collapse: separate;
     border-spacing: 0px 5px;
+    margin-top: -5px !important;
     thead {
         th {
             color: #236B8E;
@@ -59,8 +76,18 @@ ul {
                 height: 24px;
                 width: 24px;
             }
-            .td {
+            td {
                 border: none;
+
+                &:first-child {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px; 
+                }
+
+                &:last-child {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
             }
         }
     }
