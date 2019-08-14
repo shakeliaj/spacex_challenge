@@ -22,7 +22,7 @@ class LaunchList extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="col-12 mt-5 text-center">
+        <div className="col-12 mt-5 text-center mb-4">
           <h1 className="text-white">SpaceX Launches</h1>
         </div>
         <LaunchTable data={this.props.launchData} reloadData={this.requestLaunchData} />
