@@ -62,6 +62,7 @@ describe('launchData', () => {
         {
           flight_number: '1',
           details: 'details',
+          launch_date_utc: '2006-03-24T22:30:00.000Z',
           rocket: {
             first_stage: {
               cores: [
@@ -91,7 +92,7 @@ describe('launchData', () => {
           details: 'details',
           id: '1',
           land_success: true,
-          launch_date: '08/12/2019',
+          launch_date: '03/24/2006',
           reusedItems: false,
           rocket: {
             first_stage: {

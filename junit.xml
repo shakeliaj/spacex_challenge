@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="18" failures="1" time="4.878">
-  <testsuite name="getMappedData" errors="0" failures="0" skipped="0" timestamp="2019-08-12T23:41:38" time="2.089" tests="5">
-    <testcase classname="getMappedData returns mapped data for each launch" name="getMappedData returns mapped data for each launch" time="0.011">
+<testsuites name="jest tests" tests="18" failures="0" time="5.691">
+  <testsuite name="getMappedData" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:58:58" time="2.303" tests="5">
+    <testcase classname="getMappedData returns mapped data for each launch" name="getMappedData returns mapped data for each launch" time="0.013">
     </testcase>
-    <testcase classname="getRedditDetails return TRUE boolean value for existing reddit links" name="getRedditDetails return TRUE boolean value for existing reddit links" time="0">
+    <testcase classname="getRedditDetails return TRUE boolean value for existing reddit links" name="getRedditDetails return TRUE boolean value for existing reddit links" time="0.001">
     </testcase>
     <testcase classname="getRedditDetails returns FALSE boolean value for non-existent reddit links" name="getRedditDetails returns FALSE boolean value for non-existent reddit links" time="0">
     </testcase>
@@ -12,49 +12,40 @@
     <testcase classname="getReused returns FALSE boolean value for reused items" name="getReused returns FALSE boolean value for reused items" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="launchData" errors="0" failures="0" skipped="0" timestamp="2019-08-12T23:41:38" time="2.385" tests="4">
-    <testcase classname="launchData returns state from GET_LAUNCH_DATA_REQUEST" name="launchData returns state from GET_LAUNCH_DATA_REQUEST" time="0.021">
+  <testsuite name="launchData" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:58:58" time="2.53" tests="4">
+    <testcase classname="launchData returns state from GET_LAUNCH_DATA_REQUEST" name="launchData returns state from GET_LAUNCH_DATA_REQUEST" time="0.006">
     </testcase>
-    <testcase classname="launchData returns state from GET_LAUNCH_DATA_SUCCESS" name="launchData returns state from GET_LAUNCH_DATA_SUCCESS" time="0.003">
+    <testcase classname="launchData returns state from GET_LAUNCH_DATA_SUCCESS" name="launchData returns state from GET_LAUNCH_DATA_SUCCESS" time="0.006">
     </testcase>
     <testcase classname="launchData returns state from GET_LAUNCH_DATA_FAILURE" name="launchData returns state from GET_LAUNCH_DATA_FAILURE" time="0.001">
     </testcase>
     <testcase classname="launchData returns default state" name="launchData returns default state" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="getLaunchData" errors="0" failures="0" skipped="0" timestamp="2019-08-12T23:41:37" time="2.454" tests="4">
-    <testcase classname="getLaunchData resolves" name="getLaunchData resolves" time="0.012">
+  <testsuite name="getLaunchData" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:58:58" time="2.919" tests="4">
+    <testcase classname="getLaunchData resolves" name="getLaunchData resolves" time="0.008">
     </testcase>
     <testcase classname="getLaunchData it throws an error" name="getLaunchData it throws an error" time="0.001">
     </testcase>
-    <testcase classname="watchGetLaunchData takes latest GET_LAUNCH_DATA_REQUEST" name="watchGetLaunchData takes latest GET_LAUNCH_DATA_REQUEST" time="0">
+    <testcase classname="watchGetLaunchData takes latest GET_LAUNCH_DATA_REQUEST" name="watchGetLaunchData takes latest GET_LAUNCH_DATA_REQUEST" time="0.001">
     </testcase>
-    <testcase classname="root forks all watch functions" name="root forks all watch functions" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="error response" errors="0" failures="1" skipped="0" timestamp="2019-08-12T23:41:40" time="0.675" tests="2">
-    <testcase classname="error response returns error" name="error response returns error" time="0.006">
-    </testcase>
-    <testcase classname="getLaunchData returns resolved response" name="getLaunchData returns resolved response" time="0.002">
-      <failure>ReferenceError: transformRequest is not defined
-    at Object.&lt;anonymous&gt; (/Users/shakeliajohnson/Documents/CodeSpace/spacex_challenge/app/api/__tests__/spacex.test.js:42:44)
-    at Object.asyncJestTest (/Users/shakeliajohnson/Documents/CodeSpace/spacex_challenge/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
-    at resolve (/Users/shakeliajohnson/Documents/CodeSpace/spacex_challenge/node_modules/jest-jasmine2/build/queueRunner.js:43:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/shakeliajohnson/Documents/CodeSpace/spacex_challenge/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
-    at promise.then (/Users/shakeliajohnson/Documents/CodeSpace/spacex_challenge/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
-    at &lt;anonymous&gt;
-    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    <testcase classname="root forks all watch functions" name="root forks all watch functions" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="getLaunchData" errors="0" failures="0" skipped="0" timestamp="2019-08-12T23:41:40" time="0.385" tests="1">
-    <testcase classname="getLaunchData returns GET_LAUNCH_DATA_REQUEST" name="getLaunchData returns GET_LAUNCH_DATA_REQUEST" time="0.004">
+  <testsuite name="getLaunchData" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:59:00" time="0.812" tests="2">
+    <testcase classname="getLaunchData resolves" name="getLaunchData resolves" time="0.006">
+    </testcase>
+    <testcase classname="getLaunchData returns error" name="getLaunchData returns error" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="storeConfig" errors="0" failures="0" skipped="0" timestamp="2019-08-12T23:41:40" time="0.725" tests="2">
-    <testcase classname="storeConfig env" name="storeConfig env" time="0.005">
+  <testsuite name="storeConfig" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:59:00" time="1.069" tests="2">
+    <testcase classname="storeConfig env" name="storeConfig env" time="0.006">
     </testcase>
-    <testcase classname="storeConfig calls store.dispatch with END" name="storeConfig calls store.dispatch with END" time="0.001">
+    <testcase classname="storeConfig calls store.dispatch with END" name="storeConfig calls store.dispatch with END" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="getLaunchData" errors="0" failures="0" skipped="0" timestamp="2019-08-14T14:59:01" time="0.471" tests="1">
+    <testcase classname="getLaunchData returns GET_LAUNCH_DATA_REQUEST" name="getLaunchData returns GET_LAUNCH_DATA_REQUEST" time="0.008">
     </testcase>
   </testsuite>
 </testsuites>

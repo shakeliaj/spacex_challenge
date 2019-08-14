@@ -1,13 +1,4 @@
-import * as axios from 'axios';
-
-axios.interceptors.response.use(
-  res => {
-    return res;
-  },
-  err => {
-    return Promise.reject(err);
-  }
-);
+import axios from 'axios';
 
 export default class SpaceX {
   constructor() {
@@ -15,6 +6,8 @@ export default class SpaceX {
   }
 
   async getLaunchData() {
-    return axios.get('https://api.spacexdata.com/v2/launches');
+    return axios.get('https://api.spacexdata.com/v2/launches')
+      .then(res => res)
+      .catch(err => err);
   }
 }
